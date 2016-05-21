@@ -7,4 +7,6 @@ The manuscript is currently in review.
 The R-code contain the full code for reading, managing and analysing the data as provided in the manuscript.
 The data base and the country class files are csv files and may be downloaded seperatly. The R code does contain a link for reading in the data automatically.
 
+They are all freely available under the CC-BY-4.0 license.
+
 Any questions or comments are welcomed at sagamari@rm.dk
