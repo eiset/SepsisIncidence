@@ -5,6 +5,6 @@ This repository contains the dataset, codebook, and R-code created for the resea
 The manuscript is currently in review.
 
 The R-code contain the full code for reading, managing and analysing the data as provided in the manuscript.
-The data base and the country code files are csv files and may be downloaded seperatly. The R code does contain a link for reading in the data automatically.
+The data base and the country class files are csv files and may be downloaded seperatly. The R code does contain a link for reading in the data automatically.
 
 Any questions or comments are welcomed at sagamari@rm.dk
