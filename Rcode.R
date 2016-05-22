@@ -2,7 +2,7 @@
 # Title: R code for the research project "Differences in reported sepsis
 # incidence according to study design: a literature review"
 # Author: Andreas Halgreen Eiset
-# System: x86_64-apple-darwin13.4.0; Linux 4.2.0-35-generic; R version: 3.3.0
+# System: x86_64-pc-linux-gnu; Linux 4.2.0-35-generic; R version: 3.3.0
 # Packages: dplyr_0.4.3; tidyr_0.4.1; ggplot2_2.1.0
 # --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
