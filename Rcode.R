@@ -172,7 +172,7 @@ filter(datbas.srch, reason %in% 20) %>% summarise(n())
 filter(datbas.srch, !reason %in% 20) %>%
         group_by(inc.full.read) %>%
         tally()
-# "0" og "1" are articles read in full
+# "0" and "1" are articles read in full
 
 # Step 4: Studies found in reference lists
 excl.2 <- filter(flow, found.by.ref == 1)
