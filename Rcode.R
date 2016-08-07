@@ -214,23 +214,22 @@ dtap <- dta %>%
 dtap$type <- factor(dtap$type)
 dtap$coding.sys <- factor(dtap$coding.sys)
 
-clrs <- c("#32CD32", "#e31a1c", "#6a3d9a", "#000080", "#1f78b4", "#b15928",
-          "#FF00FF", "#000000", "#ff7f00", "#7FFFD4", "#00BFFF", "#fdbf6f",
-          "#FF1493", "#00CED1", "#C1FFC1", "#228B22", "#FFDEAD", "#2B2B2B",
-          "#595959", "#B5B5B5", "#00CD00", "#FF6EB4", "#F0E68C", "#ADD8E6",
-          "#B4CDCD", "#FF0000", "#FFA07A", "#8470FF", "#FFD700", "#CD9B1D")
+clrs <- rep(c("#00CED1", "#1f78b4", "#33a02c", "#fb9a99", "#e31a1c", "#FF1493",
+          "#ff7f00", "#000000", "#6a3d9a", "#b15928", "#00BFFF", "#00CD00"), 3)
 
 # Figure 2 ------------------------------------------------
-ggincdYr <- dtap %>%
+incdYr <- dtap %>%
         mutate(auth2 = gsub("([A-Za-z]+).*", "\\1", .$author)) %>%
         unite(intrm, c(auth2, pub.year), sep = " et al., ", remove = FALSE) %>%
         mutate(intrm2 = gsub("[0-9]", "", .$id)) %>%
         unite(Study, c(intrm, intrm2), sep = "", remove = TRUE) %>%
-        filter(!incid %in% NA) %>%
-        ggplot(aes(year, incid)) +
-        geom_point(aes(colour = Study), size = 3) +
+        filter(!incid %in% NA)
+
+ggincdYr <- ggplot(incdYr, aes(year, incid)) +
+        geom_point(aes(colour = Study, shape = Study), size = 3) +
+        scale_shape_manual(values = 0:length(unique(incdYr$Study))) +
         geom_line(aes(colour = Study)) +
-        scale_colour_manual(values = sample(clrs)) +
+        scale_colour_manual(values = clrs) +
         scale_x_continuous(name = "Year") +
         scale_y_continuous(name = "Incidence pr. 100,000 person-years") +
         facet_grid(type ~ coding.sys)
