@@ -215,7 +215,8 @@ dtap$type <- factor(dtap$type)
 dtap$coding.sys <- factor(dtap$coding.sys)
 
 clrs <- rep(c("#00CED1", "#1f78b4", "#33a02c", "#fb9a99", "#e31a1c", "#FF1493",
-          "#ff7f00", "#000000", "#6a3d9a", "#b15928", "#00BFFF", "#00CD00"), 3)
+          "#ff7f00", "#6E6E6E", "#6a3d9a", "#b15928",  "#00BFFF", "#FFC125",
+          "#00CD00"), 3)
 
 # Figure 2 ------------------------------------------------
 incdYr <- dtap %>%
